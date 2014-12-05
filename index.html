@@ -18,7 +18,7 @@
   </head>
   <body>
     <h1>CALCULATOR</h1>
-	<div id="resultado" class="alert alert-success" role="alert">
+	<div id="resultado" class="alert alert-success text-right" role="alert">
 	<strong>0</strong>
 	</div>
 	<div>
@@ -35,8 +35,8 @@
 	<button class="btn btn-lg btn-primary" type="button">/</button>
 	</p>
 	<p>
-	<button class="btn btn-lg btn-default" type="button" onclick="show(1);">1</button>
-	<button class="btn btn-lg btn-default" type="button" onclick="show(2);">2</button>
+	<button class="btn btn-lg btn-default" type="button">1</button>
+	<button class="btn btn-lg btn-default" type="button">2</button>
 	<button class="btn btn-lg btn-default" type="button">3</button>
 	<button class="btn btn-lg btn-primary" type="button">x</button>
 	</p>
@@ -50,65 +50,22 @@
 	<button class="btn btn-lg btn-default" type="button">7</button>
 	<button class="btn btn-lg btn-default" type="button">8</button>
 	<button class="btn btn-lg btn-default" type="button">9</button>
-	<button class="btn btn-lg btn-primary" type="button" onclick="suma(primer_numero); changeClass(this.id);" id="suma">+</button>
+	<button class="btn btn-lg btn-primary" type="button">+</button>
 	</p>
 	<p>
 	<button class="btn btn-lg btn-default" type="button">0</button>
 	<button class="btn btn-lg btn-default" type="button">,</button>
-	<button class="btn btn-lg btn-success" type="button" onclick="resultado();" id="igual">=</button>
+	<button class="btn btn-lg btn-success" type="button">=</button>
 	</p>
 	</div>
 	
-	<p id="resultado1"></p>
 	
-	<script>
-	var i2=[];
-	var primer_numero=0;
-	var cont2;
-	var a; 
-	var b;
-	var r;
-	var c;
-	
-	function show(i){
-	switch(primer_numero){
-	case 
-	if (i2.length === 0){
-	i2.push(i);
-	cont2=i2.length;
-	primer_numero=primer_numero*10+i2[cont2-1];
-	$("strong").text(primer_numero);
-	}
-		
-	function changeClass(id){
-	if ($('#' + id).hasClass('btn-primary')){
-		alert(a);
-		$("strong").text(0);
-		}
-	}
-	
-	function suma(primer_numero) {
-		a=primer_numero;
-		alert("voy a sumar a="+a);
-		i2=[];
-		primer_numero=0;
-	};
-	
-	function resultado(){
-		b=$("strong").text();
-		alert("ya tenemos b="+b);
-		a=primer_numero;
-		alert("voy a sumar a=" + a);
-	};
-	
-	
-	
-	</script>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-  </body>
+    <script src="js/funciones.js"></script>	  
+</body>
 </html>
